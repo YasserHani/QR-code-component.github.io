@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+/* i uesd this beacaue it makes choose color easy for me */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+  --main-background-color: #f0f0f0;
+}
+body {
+  font-size: 15px;
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  height: 100vh;
+  background-color: var(--main-background-color);
+}
+::selection {
+  color: white;
+  background-color: #3685ff;
+}
+.dad {
+  background-color: var(--Light-gray);
+  height: 70%;
+  position: relative;
+  width: 90%;
+  transform: translate(5%, 15%);
+  border-radius: 2px;
+  z-index: 1;
+}
+.dad::after {
+  content: "L";
+  position: absolute;
+  top: -211px;
+  right: 19px;
+  font-size: 200px;
+  color: #3f51b5;
+  z-index: -1;
+}
+.dad .son {
+  background-color: var(--white);
+  width: fit-content;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  border-radius: 10px;
+}
+.dad .img {
+  padding: 10px;
+  overflow: hidden;
+  max-width: 300px;
+}
+.dad .img img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+.dad .son .text {
+  max-width: 290px;
+  padding: 0 10px;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 15px;
+}
+.dad .son .text h1 {
+  font-size: 20px;
+  color: var(--Dark-blue);
+}
+.dad .son .text p {
+  color: #777;
+}
